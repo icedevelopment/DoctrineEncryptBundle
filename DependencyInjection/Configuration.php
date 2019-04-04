@@ -37,7 +37,6 @@ class Configuration implements ConfigurationInterface {
                         ->ifNotInArray($supportedEncryptors)
                             ->thenInvalid('You must choose from one of provided encryptors or specify your own encryptor class through encryptor_class option')
                         ->end()
-                        ->defaultValue($supportedEncryptors[0])
                     ->end()
                     ->scalarNode('encryptor_class')
                     ->end()
